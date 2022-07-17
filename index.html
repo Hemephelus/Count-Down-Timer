@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .styleNumber {
+            @apply text-[50px] text-[#E8EAED] font-bold  w-16 outline-none bg-[#202124];
+            
+          }
+
+          .activeNumber{
+            @apply border-r
+          }
+
+          .styleText {
+            @apply text-[40px] text-[#E8EAED] font-bold ;
+            
+          }
+        }
+      </style>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-[#202124]">
+    <div id="app" class="w-[500px] border rounded-md border-[#303134] h-[300px] grid grid-rows-[auto_1fr_auto] ">
+        <div id="header"
+            class=" text-[#5EA6EB] flex text-lg items-center justify-center gap-2  border-b-2 border-[#5EA6EB] py-4 font-bold">
+            <span class="material-icons">
+                hourglass_empty
+            </span>
+            <p>TIMER</p>
+        </div>
+        <div class=" flex items-center justify-start relative ">
+
+            <div id="body" class=" flex items-center justify-center border-b-2 border-[#303134]  ml-4">
+                <input class="styleNumber hours" type="number" placeholder="00">
+                <span class="styleText">h</span>
+                <input class="styleNumber ml-2 minutes" type="number" placeholder="00">
+                <span class="styleText">m</span>
+                <input class="styleNumber ml-2 seconds" type="number" placeholder="00">
+                <span class="styleText">s</span>
+
+
+            </div>
+            <div id="timelaps" class="absolute -bottom-[2px] h-[4px] w-[0px] bg-[#5EA6EB]"></div>
+
+        </div>
+        <div id="footer" class="flex gap-4 items-center justify-evenly border-t border-[#303134] py-4">
+            <button class="rounded text-[#202124] bg-[#8AB4F8] hover:bg-[#1B66C9] px-8 py-2 font-bold"
+                id="start">START</button>
+            <button class="rounded text-[#202124] bg-[#BDC1C6] hover:bg-[#E4EEFC] px-8 py-2 font-bold "
+                id="reset">RESET</button>
+        </div>
+    </div>
+    <script src="./code.js"></script>
+</body>
+
+</html>
